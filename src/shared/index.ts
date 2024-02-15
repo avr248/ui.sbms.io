@@ -1,2 +1,2 @@
-import '../style.css';
+import '../style.css'
 export {default as Input} from './Input/Input';

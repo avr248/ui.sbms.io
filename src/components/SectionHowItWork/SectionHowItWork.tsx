@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import NcImage from "shared/NcImage/NcImage";
-import HIW1img from "images/HIW1img.png";
-import HIW2img from "images/HIW2img.png";
-import HIW3img from "images/HIW3img.png";
-import HIW4img from "images/HIW4img.png";
-import VectorImg from "images/VectorHIW.svg";
 import Badge from "shared/Badge/Badge";
+import NcImage from "shared/NcImage/NcImage";
+const HIW1img = "images/HIW1img.png";
+const HIW2img = "images/HIW2img.png";
+const HIW3img = "images/HIW3img.png";
+const HIW4img = "images/HIW4img.png";
+const VectorImg = "images/VectorHIW.svg";
 
 export interface SectionHowItWorkProps {
   className?: string;

@@ -2,7 +2,6 @@ import FollowButton from "components/FollowButton";
 import VerifyIcon from "components/VerifyIcon";
 import { _getPersonNameRd } from "contains/fakeData";
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import Badge from "shared/Badge/Badge";
 
@@ -13,8 +12,8 @@ export interface CardAuthorBoxProps {
 
 const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = "", index }) => {
   return (
-    <Link
-      to={"/page-author"}
+    <a
+      href={"/page-author"}
       className={`nc-CardAuthorBox relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7  [ nc-box-has-hover ] [ nc-dark-box-bg-has-hover ] ${className}`}
       data-nc-id="CardAuthorBox"
     >
@@ -38,7 +37,7 @@ const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = "", index }) => {
         </div>
       </div>
       <FollowButton className="mt-3" />
-    </Link>
+    </a>
   );
 };
 

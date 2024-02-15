@@ -12,7 +12,7 @@ import SectionSliderCategories from "components/SectionSliderCategories/SectionS
 import SectionGridFeatureItems from "./SectionGridFeatureItems";
 import SectionPromo3 from "components/SectionPromo3";
 import SectionClientSay from "components/SectionClientSay/SectionClientSay";
-import SectionMagazine5 from "containers/BlogPage/SectionMagazine5";
+import SectionMagazine5 from "containers/PageBlog/SectionMagazine5";
 import Heading from "components/Heading/Heading";
 import ButtonSecondary from "shared/Button/ButtonSecondary";
 import { PRODUCTS, SPORT_PRODUCTS } from "data/data";

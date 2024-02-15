@@ -2,7 +2,6 @@ import React from "react";
 import ButtonClose from "shared/ButtonClose/ButtonClose";
 import Logo from "shared/Logo/Logo";
 import { Disclosure } from "@headlessui/react";
-import { NavLink } from "react-router-dom";
 import { NavItemType } from "./NavigationItem";
 import { NAVIGATION_DEMO_2 } from "data/navigation";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
@@ -26,16 +25,9 @@ const NavMobile: React.FC<NavMobileProps> = ({
     return (
       <ul className="nav-mobile-sub-menu pl-6 pb-1 text-base">
         {item.children?.map((i, index) => (
-          <Disclosure key={i.href + index} as="li">
-            <NavLink
-              to={{
-                pathname: i.href || undefined,
-              }}
-              className={({ isActive }) =>
-                `flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4 ${itemClass} ${
-                  isActive ? "text-secondary" : ""
-                }`
-              }
+          <Disclosure key={i.href + String(index)} as="li">
+            <a href={i.href}
+              className={"flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pr-4"}
             >
               <span
                 className={`py-2.5 ${!i.children ? "block w-full" : ""}`}
@@ -59,7 +51,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
                   </Disclosure.Button>
                 </span>
               )}
-            </NavLink>
+            </a>
             {i.children && (
               <Disclosure.Panel>
                 {_renderMenuChild(
@@ -81,15 +73,9 @@ const NavMobile: React.FC<NavMobileProps> = ({
         as="li"
         className="text-slate-900 dark:text-white"
       >
-        <NavLink
-          className={({ isActive }) =>
-            `flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg ${
-              isActive ? "text-secondary" : ""
-            }`
-          }
-          to={{
-            pathname: item.href || undefined,
-          }}
+        <a
+          className={"flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"}
+          href={item.href}
         >
           <span
             className={!item.children ? "block w-full" : ""}
@@ -113,7 +99,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
               </Disclosure.Button>
             </span>
           )}
-        </NavLink>
+        </a>
         {item.children && (
           <Disclosure.Panel>{_renderMenuChild(item)}</Disclosure.Panel>
         )}

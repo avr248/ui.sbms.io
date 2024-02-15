@@ -7,17 +7,14 @@ import TemplatesDropdown from "./TemplatesDropdown";
 import DropdownCategories from "./DropdownCategories";
 import CartDropdown from "./CartDropdown";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useNavigate } from "react-router-dom";
 
 export interface MainNav2Props {
   className?: string;
+  onSubmit?: any;
 }
 
-const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
+const MainNav2: FC<MainNav2Props> = ({ className = "", onSubmit }) => {
   const [showSearchForm, setShowSearchForm] = useState(false);
-
-  const navigate = useNavigate();
-
   const renderMagnifyingGlassIcon = () => {
     return (
       <svg
@@ -51,7 +48,8 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
         className="flex-1 py-2 text-slate-900 dark:text-slate-100"
         onSubmit={(e) => {
           e.preventDefault();
-          navigate("/page-search");
+          onSubmit()
+          // navigate("/page-search");
         }}
       >
         <div className="bg-slate-50 dark:bg-slate-800 flex items-center space-x-1.5 px-5 h-full rounded">

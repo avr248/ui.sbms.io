@@ -1,16 +1,14 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import rightImgDemo from "images/promo3.png";
-import backgroundLineSvg from "images/BackgroundLine.svg";
 import Badge from "shared/Badge/Badge";
 import Input from "shared/Input/Input";
 import ButtonCircle from "shared/Button/ButtonCircle";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
-
 export interface SectionPromo3Props {
   className?: string;
 }
-
+const rightImgDemo = "images/promo3.png";
+const backgroundLineSvg = "images/BackgroundLine.svg";
 const SectionPromo3: FC<SectionPromo3Props> = ({ className = "lg:pt-10" }) => {
   return (
     <div className={`nc-SectionPromo3 ${className}`}>

@@ -4,9 +4,11 @@ import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
-import packageJson from './package.json' assert {type: 'json'};
+import autoprefixer from 'autoprefixer';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import packageJson from './package.json' assert {type: 'json'};
+import images from 'rollup-plugin-image-assets';
 
 export default [
   {
@@ -25,13 +27,23 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      tailwindcss(),
-      resolve(),
-      commonjs(),
-      typescript({tsconfig: './tsconfig.json', noEmitOnError: false}),
-      postcss(),
-      terser(),
-    ],
+       tailwindcss(),
+        resolve(),
+        commonjs(),
+        typescript({tsconfig: './tsconfig.json', noEmitOnError: false}),
+        postcss({
+          config: {
+            path: "./postcss.config.js",
+          },
+          extensions: [".css"],
+          minimize: true,
+          inject: {
+            insertAt: "top",
+          },
+        }),
+        terser(),
+        images()
+      ],
   },
   {
     input: 'dist/esm/types/index.d.ts',

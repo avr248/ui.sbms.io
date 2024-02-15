@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import { Link } from "react-router-dom";
 
 export interface CardCategory2Props {
   className?: string;
@@ -20,8 +19,8 @@ const CardCategory2: FC<CardCategory2Props> = ({
   desc,
 }) => {
   return (
-    <Link
-      to={"/page-collection"}
+    <a
+      href={"/page-collection"}
       className={`nc-CardCategory2 ${className}`}
       data-nc-id="CardCategory2"
     >
@@ -45,7 +44,7 @@ const CardCategory2: FC<CardCategory2Props> = ({
           {desc}
         </span>
       </div>
-    </Link>
+    </a>
   );
 };
 

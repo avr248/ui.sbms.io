@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
 import ButtonSecondary from "shared/Button/ButtonSecondary";
-import rightImg from "images/about-hero-right.png";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export interface SectionHeroProps {
@@ -9,6 +8,7 @@ export interface SectionHeroProps {
   heading?: ReactNode;
   subHeading?: string;
 }
+const rightImg = "images/about-hero-right.png";
 
 const SectionHero: FC<SectionHeroProps> = ({
   className = "",

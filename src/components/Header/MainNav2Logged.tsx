@@ -5,14 +5,12 @@ import AvatarDropdown from "./AvatarDropdown";
 import Navigation from "shared/Navigation/Navigation";
 import CartDropdown from "./CartDropdown";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useNavigate } from "react-router-dom";
 
-export interface MainNav2LoggedProps {}
+export interface MainNav2LoggedProps {onSubmit?:any}
 
-const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
+const MainNav2Logged: FC<MainNav2LoggedProps> = ({onSubmit}) => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [showSearchForm, setShowSearchForm] = useState(false);
-  const navigate = useNavigate();
 
   const renderMagnifyingGlassIcon = () => {
     return (
@@ -46,7 +44,8 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          navigate("/page-search");
+          onSubmit()
+          // navigate("/page-search");
         }}
         className="flex-1 py-2 text-slate-900 dark:text-slate-100"
       >

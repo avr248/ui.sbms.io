@@ -1,14 +1,12 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import rightImgDemo from "images/promo2.png";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
 import Logo from "shared/Logo/Logo";
-import backgroundLineSvg from "images/Moon.svg";
-
 export interface SectionPromo2Props {
   className?: string;
 }
-
+const backgroundLineSvg = "images/Moon.svg";
+const rightImgDemo = "images/promo2.png";
 const SectionPromo2: FC<SectionPromo2Props> = ({ className = "lg:pt-10" }) => {
   return (
     <div className={`nc-SectionPromo2 ${className}`}>

@@ -1,5 +1,4 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
-import { Link } from "react-router-dom";
 import { LocationStates } from "routers/types";
 import twFocusClass from "utils/twFocusClass";
 
@@ -8,11 +7,9 @@ export interface ButtonProps {
   translate?: string;
   sizeClass?: string;
   fontSize?: string;
-  //
   loading?: boolean;
   disabled?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
-  // href?: keyof LocationStates | "#" | LinkProps["to"];
   href?: keyof LocationStates;
   targetBlank?: boolean;
   onClick?: () => void;
@@ -63,15 +60,14 @@ const Button: FC<ButtonProps> = ({
 
   if (!!href) {
     return (
-      <Link
-        to={href}
+      <a
+        href={href}
         target={targetBlank ? "_blank" : undefined}
         className={`${CLASSES} `}
         onClick={onClick}
-        rel="noopener noreferrer"
       >
         {children || `This is Link`}
-      </Link>
+      </a>
     );
   }
 

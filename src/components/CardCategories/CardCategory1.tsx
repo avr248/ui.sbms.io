@@ -1,6 +1,5 @@
 import { _getImgRd, _getTagNameRd } from "contains/fakeData";
 import React, { FC } from "react";
-import { NavLink } from "react-router-dom";
 import NcImage from "shared/NcImage/NcImage";
 
 export interface CardCategory1Props {
@@ -19,8 +18,8 @@ const CardCategory1: FC<CardCategory1Props> = ({
   featuredImage = "",
 }) => {
   return (
-    <NavLink
-      to={"#"}
+    <a
+      href={"#"}
       className={`nc-CardCategory1 flex items-center ${className}`}
       data-nc-id="CardCategory1"
     >
@@ -46,7 +45,7 @@ const CardCategory1: FC<CardCategory1Props> = ({
           {desc || `${Math.floor(Math.random() * 50) + 10} Articles`}
         </span>
       </div>
-    </NavLink>
+    </a>
   );
 };
 

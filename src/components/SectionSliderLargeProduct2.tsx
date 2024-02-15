@@ -3,25 +3,22 @@ import Heading from "components/Heading/Heading";
 import Glide from "@glidejs/glide";
 import CollectionCard from "./CollectionCard";
 import CollectionCard2 from "./CollectionCard2";
-import { Link } from "react-router-dom";
 import Nav from "shared/Nav/Nav";
 import NavItem2 from "./NavItem2";
 import Next from "shared/NextPrev/Next";
 import Prev from "shared/NextPrev/Prev";
-import full1Img from "images/products/full1.png";
-import full11Img from "images/products/full1-1.png";
-import full12Img from "images/products/full1-2.png";
-import full13Img from "images/products/full1-3.png";
-//
-import full2Img from "images/products/full2.png";
-import full21Img from "images/products/full2-1.png";
-import full22Img from "images/products/full2-2.png";
-import full23Img from "images/products/full2-3.png";
-//
-import full3Img from "images/products/full3.png";
-import full31Img from "images/products/full3-1.png";
-import full32Img from "images/products/full3-2.png";
-import full33Img from "images/products/full3-3.png";
+const full1Img = "images/products/full1.png";
+const full11Img = "images/products/full1-1.png";
+const full12Img = "images/products/full1-2.png";
+const full13Img = "images/products/full1-3.png";
+const full2Img = "images/products/full2.png";
+const full21Img = "images/products/full2-1.png";
+const full22Img = "images/products/full2-2.png";
+const full23Img = "images/products/full2-3.png";
+const full3Img = "images/products/full3.png";
+const full31Img = "images/products/full3-1.png";
+const full32Img = "images/products/full3-2.png";
+const full33Img = "images/products/full3-3.png";
 
 export interface SectionSliderLargeProduct2Props {
   className?: string;
@@ -177,7 +174,7 @@ const SectionSliderLargeProduct2: FC<SectionSliderLargeProduct2Props> = ({
             })}
 
             <li className={`glide__slide   `}>
-              <Link to={"/page-search"} className="block relative group">
+              <a href={"/page-search"} className="block relative group">
                 <div className="relative flex flex-col rounded-2xl overflow-hidden">
                   <div className="relative">
                     <div className="aspect-w-8 aspect-h-5 bg-black/5 dark:bg-neutral-800"></div>
@@ -219,7 +216,7 @@ const SectionSliderLargeProduct2: FC<SectionSliderLargeProduct2Props> = ({
                     <div className="w-full h-28 bg-black/5 dark:bg-neutral-800"></div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

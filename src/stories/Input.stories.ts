@@ -2,15 +2,11 @@ import type {Meta, StoryObj} from '@storybook/react';
 import {Input} from '../shared';
 
 const meta = {
-  className: "",
-  sizeClass: "h-11 px-4 py-3",
-  fontClass: "text-sm font-normal",
-  rounded: "rounded-2xl",
-  type: "text",
+  title: 'Example/Input',
   component: Input,
-  tags: ['autodocs'],
+  tags: ['input'],
   argTypes: {},
-} satisfies Meta<typeof Grid>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

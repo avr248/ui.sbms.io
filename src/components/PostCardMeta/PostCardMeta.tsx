@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Avatar from "shared/Avatar/Avatar";
-import { Link } from "react-router-dom";
 import { _getPersonNameRd } from "contains/fakeData";
 
 export interface PostCardMetaProps {
@@ -17,8 +16,8 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
       className={`nc-PostCardMeta inline-flex items-center fledx-wrap text-neutral-800 dark:text-neutral-200 text-sm ${className}`}
       data-nc-id="PostCardMeta"
     >
-      <Link
-        to={"#"}
+      <a
+        href={"#"}
         className="flex-shrink-0 relative flex items-center space-x-2"
       >
         {!hiddenAvatar && (
@@ -27,7 +26,7 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
         <span className="block text-neutral-6000 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium">
           {_getPersonNameRd()}
         </span>
-      </Link>
+      </a>
       <>
         <span className="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium">
           ·

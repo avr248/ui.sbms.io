@@ -1,6 +1,5 @@
 import { TwMainColor } from "data/types";
 import React, { FC, ReactNode } from "react";
-import { Link } from "react-router-dom";
 
 export interface BadgeProps {
   className?: string;
@@ -58,12 +57,12 @@ const Badge: FC<BadgeProps> = ({
     "nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs " +
     className;
   return !!href ? (
-    <Link
-      to={href || ""}
+    <a
+      href={href || ""}
       className={`transition-colors hover:text-white duration-300 ${CLASSES} ${getColorClass()}`}
     >
       {name}
-    </Link>
+    </a>
   ) : (
     <span className={`${CLASSES} ${getColorClass(false)} ${className}`}>
       {name}

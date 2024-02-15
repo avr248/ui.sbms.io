@@ -1,7 +1,5 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import { Link } from "react-router-dom";
-import images1 from "images/nfts/cat1.webp";
 
 export interface CardCategory5Props {
   className?: string;
@@ -10,7 +8,7 @@ export interface CardCategory5Props {
   desc: string;
   index: number;
 }
-
+const images1 =  "images/nfts/cat1.webp";
 const COLORS = [
   "bg-pink-500",
   "bg-blue-500",
@@ -32,8 +30,8 @@ const CardCategory5: FC<CardCategory5Props> = ({
   index,
 }) => {
   return (
-    <Link
-      to={"/page-collection"}
+    <a
+      href={"/page-collection"}
       className={`nc-CardCategory5 flex flex-col ${className}`}
       data-nc-id="CardCategory5"
     >
@@ -61,7 +59,7 @@ const CardCategory5: FC<CardCategory5Props> = ({
           </span>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

@@ -1,7 +1,5 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import { Link } from "react-router-dom";
-import explore1Svg from "images/collections/explore1.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export interface CardCategory6Props {
@@ -12,6 +10,7 @@ export interface CardCategory6Props {
   desc: string;
   color?: string;
 }
+const explore1Svg = "images/collections/explore1.svg";
 
 const CardCategory6: FC<CardCategory6Props> = ({
   className = "",
@@ -48,17 +47,17 @@ const CardCategory6: FC<CardCategory6Props> = ({
             <h2 className={`text-lg sm:text-xl font-semibold`}>{name}</h2>
           </div>
 
-          <Link
-            to={"/page-collection"}
+          <a
+            href={"/page-collection"}
             className="flex items-center text-sm font-medium group-hover:text-primary-500 transition-colors"
           >
             <span>See Collection</span>
             <ArrowRightIcon className="w-4 h-4 ml-2.5" />
-          </Link>
+          </a>
         </div>
       </div>
 
-      <Link to={"/page-collection"}></Link>
+      <a href={"/page-collection"}></a>
     </div>
   );
 };

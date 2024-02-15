@@ -1,7 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
 import { PathName } from "routers/types";
 
 interface SolutionItem {
@@ -97,9 +96,9 @@ export default function DropdownCategories() {
                 <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid grid-cols-1 gap-5 bg-white dark:bg-neutral-800 p-7 ">
                     {CATEGORIES.map((item, index) => (
-                      <Link
+                      <a
                         key={index}
-                        to={"/page-collection"}
+                        href={"/page-collection"}
                         onClick={() => close()}
                         className={`flex items-center focus:outline-none focus-visible:ring-0 ${
                           item.active ? "" : ""
@@ -115,13 +114,13 @@ export default function DropdownCategories() {
                             {item.description}
                           </p>
                         </div>
-                      </Link>
+                      </a>
                     ))}
                   </div>
                   {/* FOOTER */}
                   <div className="p-4 bg-neutral-50 dark:bg-neutral-700">
-                    <Link
-                      to="/page-collection-2"
+                    <a
+                      href="/page-collection-2"
                       className="flow-root px-2 py-2 space-y-0.5 transition duration-150 ease-in-out rounded-md focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center">
@@ -132,7 +131,7 @@ export default function DropdownCategories() {
                       <span className="block text-sm text-slate-500 dark:text-neutral-400">
                         Look for what you need and love.
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Popover.Panel>

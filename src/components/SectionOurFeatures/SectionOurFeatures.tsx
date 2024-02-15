@@ -1,11 +1,10 @@
 import React, { FC } from "react";
-import rightImg from "images/our-features.png";
 import NcImage from "shared/NcImage/NcImage";
 import Badge from "shared/Badge/Badge";
-
 export interface SectionOurFeaturesProps {
   className?: string;
 }
+const rightImg = "images/our-features.png";
 
 const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
   className = "py-14",

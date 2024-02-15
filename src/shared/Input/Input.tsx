@@ -1,15 +1,17 @@
 import React, { InputHTMLAttributes } from "react";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  className?: string;
   sizeClass?: string;
   fontClass?: string;
   rounded?: string;
+  type?: string;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      className = "",
+      className = "class name",
       sizeClass = "h-11 px-4 py-3",
       fontClass = "text-sm font-normal",
       rounded = "rounded-2xl",

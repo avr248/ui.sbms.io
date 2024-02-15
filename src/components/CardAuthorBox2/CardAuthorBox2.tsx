@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { NavLink } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import NcImage from "shared/NcImage/NcImage";
-import { productImgs, _getPersonNameRd } from "contains/fakeData";
+import { _getPersonNameRd } from "contains/fakeData";
+import { productImgs } from "data/data";
 import VerifyIcon from "components/VerifyIcon";
 
 export interface CardAuthorBox2Props {
@@ -12,8 +12,8 @@ export interface CardAuthorBox2Props {
 
 const CardAuthorBox2: FC<CardAuthorBox2Props> = ({ className = "" }) => {
   return (
-    <NavLink
-      to={"/page-author"}
+    <a
+      href={"/page-author"}
       className={`nc-CardAuthorBox2 flex flex-col overflow-hidden [ nc-box-has-hover ] [ nc-dark-box-bg-has-hover ] ${className}`}
       data-nc-id="CardAuthorBox2"
     >
@@ -51,7 +51,7 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({ className = "" }) => {
           </span>
         </div>
       </div>
-    </NavLink>
+    </a>
   );
 };
 

@@ -1,4 +1,3 @@
-import rightImg from "images/hero-right1.png";
 import React, { FC } from "react";
 import SectionFounder from "./SectionFounder";
 import SectionStatistic from "./SectionStatistic";
@@ -8,6 +7,8 @@ import BackgroundSection from "components/BackgroundSection/BackgroundSection";
 import SectionHero from "./SectionHero";
 import SectionClientSay from "components/SectionClientSay/SectionClientSay";
 import SectionPromo3 from "components/SectionPromo3";
+const storagePath = "https://shm-product-images.s3.amazonaws.com";
+const rightImg = storagePath+"/images/hero-right1.png";
 
 export interface PageAboutProps {
   className?: string;

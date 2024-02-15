@@ -1,13 +1,13 @@
 import React, { useEffect, useId } from "react";
 import Heading from "./Heading/Heading";
-import img1 from "images/collections/1.png";
-import img2 from "images/collections/5.png";
-import img3 from "images/collections/4.png";
-import img4 from "images/collections/3.png";
 import CardCategory3, {
   CardCategory3Props,
 } from "./CardCategories/CardCategory3";
 import Glide from "@glidejs/glide";
+const img1 = "images/collections/1.png";
+const img2 = "images/collections/5.png";
+const img3 = "images/collections/3.png";
+const img4 = "images/collections/4.png";
 
 export const CATS_DISCOVER: CardCategory3Props[] = [
   {
@@ -35,6 +35,7 @@ export const CATS_DISCOVER: CardCategory3Props[] = [
     color: "bg-green-50",
   },
 ];
+
 
 const DiscoverMoreSlider = () => {
   const id = useId();

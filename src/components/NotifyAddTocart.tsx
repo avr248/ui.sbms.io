@@ -2,7 +2,6 @@ import { Transition } from "@headlessui/react";
 import Prices from "components/Prices";
 import { PRODUCTS } from "data/data";
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 
 interface Props {
   show: boolean;
@@ -10,6 +9,13 @@ interface Props {
   variantActive: number;
   sizeSelected: string;
   qualitySelected: number;
+  product: object;
+}
+
+interface ProductProps {
+  name: string;
+  price: string;
+  variants: string;
 }
 
 const NotifyAddTocart: FC<Props> = ({
@@ -52,12 +58,12 @@ const NotifyAddTocart: FC<Props> = ({
             <p className="text-gray-500 dark:text-slate-400">{`Qty ${qualitySelected}`}</p>
 
             <div className="flex">
-              <Link
-                to={"/cart"}
+              <a
+                href={"/cart"}
                 className="font-medium text-primary-6000 dark:text-primary-500 "
               >
                 View cart
-              </Link>
+              </a>
             </div>
           </div>
         </div>

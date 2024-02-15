@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import NcImage from "shared/NcImage/NcImage";
-import { Link } from "react-router-dom";
 import ButtonSecondary from "shared/Button/ButtonSecondary";
 import { CATS_DISCOVER } from "components/DiscoverMoreSlider";
 
@@ -20,8 +19,8 @@ const CardCategory3: FC<CardCategory3Props> = ({
   color = CATS_DISCOVER[2].color,
 }) => {
   return (
-    <Link
-      to={"/page-collection"}
+    <a
+      href={"/page-collection"}
       className={`nc-CardCategory3 block ${className}`}
       data-nc-id="CardCategory3"
     >
@@ -62,7 +61,7 @@ const CardCategory3: FC<CardCategory3Props> = ({
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

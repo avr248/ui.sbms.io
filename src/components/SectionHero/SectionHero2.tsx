@@ -1,15 +1,13 @@
 import React, { FC, useState } from "react";
-import imageRightPng from "images/hero-right.png";
-import imageRightPng2 from "images/hero-right-2.png";
-import imageRightPng3 from "images/hero-right-3.png";
-
-import backgroundLineSvg from "images/Moon.svg";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
 import Next from "shared/NextPrev/Next";
 import Prev from "shared/NextPrev/Prev";
 import useInterval from "react-use/lib/useInterval";
 import useBoolean from "react-use/lib/useBoolean";
-
+const backgroundLineSvg = "images/Moon.svg";
+const imageRightPng = "images/hero-right.png";
+const imageRightPng2 = "images/hero-right-2.png";
+const imageRightPng3 = "images/hero-right-3.png";
 interface Hero2DataType {
   image: string;
   heading: string;

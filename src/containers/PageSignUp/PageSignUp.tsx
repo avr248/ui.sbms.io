@@ -1,12 +1,11 @@
 import React, { FC } from "react";
-import facebookSvg from "images/Facebook.svg";
-import twitterSvg from "images/Twitter.svg";
-import googleSvg from "images/Google.svg";
 import { Helmet } from "react-helmet-async";
 import Input from "shared/Input/Input";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
-import { Link } from "react-router-dom";
-
+const storagePath = "https://shm-product-images.s3.amazonaws.com";
+const facebookSvg = storagePath+"/images/Facebook.svg";
+const twitterSvg = storagePath+"/images/Twitter.svg";
+const googleSvg = storagePath+"/images/Google.svg";
 export interface PageSignUpProps {
   className?: string;
 }
@@ -86,12 +85,11 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
             <ButtonPrimary type="submit">Continue</ButtonPrimary>
           </form>
 
-          {/* ==== */}
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
             Already have an account? {` `}
-            <Link className="text-green-600" to="/login">
+            <a className="text-green-600" href="/login">
               Sign in
-            </Link>
+            </a>
           </span>
         </div>
       </div>

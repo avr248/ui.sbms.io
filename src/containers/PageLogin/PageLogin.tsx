@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import facebookSvg from "images/Facebook.svg";
-import twitterSvg from "images/Twitter.svg";
-import googleSvg from "images/Google.svg";
 import { Helmet } from "react-helmet-async";
 import Input from "shared/Input/Input";
-import { Link } from "react-router-dom";
 import ButtonPrimary from "shared/Button/ButtonPrimary";
 
+const storagePath = "https://shm-product-images.s3.amazonaws.com";
+const facebookSvg = storagePath+"/images/Facebook.svg";
+const twitterSvg = storagePath+"/images/Twitter.svg";
+const googleSvg = storagePath+"/images/Google.svg";
 export interface PageLoginProps {
   className?: string;
 }
@@ -80,9 +80,9 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
             <label className="block">
               <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
                 Password
-                <Link to="/forgot-pass" className="text-sm text-green-600">
+                <a href="/forgot-pass" className="text-sm text-green-600">
                   Forgot password?
-                </Link>
+                </a>
               </span>
               <Input type="password" className="mt-1" />
             </label>
@@ -92,9 +92,9 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
           {/* ==== */}
           <span className="block text-center text-neutral-700 dark:text-neutral-300">
             New user? {` `}
-            <Link className="text-green-600" to="/signup">
+            <a className="text-green-600" href="/signup">
               Create an account
-            </Link>
+            </a>
           </span>
         </div>
       </div>

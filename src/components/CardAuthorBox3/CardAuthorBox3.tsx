@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import NcImage from "shared/NcImage/NcImage";
 import { nftsAbstracts, personNames } from "contains/fakeData";
@@ -65,7 +64,7 @@ const CardAuthorBox3: FC<CardAuthorBox3Props> = ({
         </div>
       </div>
 
-      <Link to={"/page-author"} className="absolute inset-0"></Link>
+      <a href={"/page-author"} className="absolute inset-0"></a>
     </div>
   );
 };

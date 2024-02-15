@@ -2,11 +2,10 @@ import React, { FC, useEffect, useId } from "react";
 import Heading from "components/Heading/Heading";
 import Glide from "@glidejs/glide";
 import CardCategory2 from "components/CardCategories/CardCategory2";
-import department1Png from "images/collections/department1.png";
-import department2Png from "images/collections/department2.png";
-import department3Png from "images/collections/department3.png";
-import department4Png from "images/collections/department4.png";
-import { Link } from "react-router-dom";
+const department1Png = "images/collections/department1.png";
+const department2Png = "images/collections/department2.png";
+const department3Png = "images/collections/department3.png";
+const department4Png = "images/collections/department4.png";
 
 export interface CardCategoryData {
   name: string;
@@ -151,10 +150,10 @@ const SectionSliderCategories: FC<SectionSliderCategoriesProps> = ({
                     </span>
                   </div>
                 </div>
-                <Link
-                  to={"/"}
+                <a
+                  href={"/"}
                   className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"
-                ></Link>
+                ></a>
               </div>
             </li>
           </ul>

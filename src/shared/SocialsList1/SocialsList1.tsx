@@ -1,9 +1,10 @@
 import { SocialType } from "shared/SocialsShare/SocialsShare";
 import React, { FC } from "react";
-import facebook from "images/socials/facebook.svg";
-import twitter from "images/socials/twitter.svg";
-import telegram from "images/socials/telegram.svg";
-import youtube from "images/socials/youtube.svg";
+const storagePath = "https://shm-product-images.s3.amazonaws.com";
+const facebook = storagePath+"/images/socials/facebook.svg";
+const twitter = storagePath+"/images/socials/twitter.svg";
+const telegram = storagePath+"/images/socials/telegram.svg";
+const youtube = storagePath+"/images/socials/youtube.svg";
 
 export interface SocialsList1Props {
   className?: string;

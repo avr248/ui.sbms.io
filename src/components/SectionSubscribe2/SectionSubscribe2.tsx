@@ -1,14 +1,13 @@
 import React, { FC } from "react";
 import ButtonCircle from "shared/Button/ButtonCircle";
-import rightImg from "images/promo3.png";
 import NcImage from "shared/NcImage/NcImage";
 import Badge from "shared/Badge/Badge";
 import Input from "shared/Input/Input";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
-
 export interface SectionSubscribe2Props {
   className?: string;
 }
+const rightImg = "images/promo3.png";
 
 const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
   return (

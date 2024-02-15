@@ -2,20 +2,20 @@ import Glide from "@glidejs/glide";
 import Heading from "components/Heading/Heading";
 import React, { FC, useId } from "react";
 import { useEffect } from "react";
-import clientSayMain from "images/clientSayMain.png";
-import clientSay1 from "images/clientSay1.png";
-import clientSay2 from "images/clientSay2.png";
-import clientSay3 from "images/clientSay3.png";
-import clientSay4 from "images/clientSay4.png";
-import clientSay5 from "images/clientSay5.png";
-import clientSay6 from "images/clientSay6.png";
-import quotationImg from "images/quotation.png";
-import quotationImg2 from "images/quotation2.png";
 import { StarIcon } from "@heroicons/react/24/solid";
-
 export interface SectionClientSayProps {
   className?: string;
 }
+const clientSayMain = "images/clientSayMain.png";
+const clientSay1 = "images/clientSay1.png";
+const clientSay2 = "images/clientSay2.png";
+const clientSay3 = "images/clientSay3.png";
+const clientSay4 = "images/clientSay4.png";
+const clientSay5 = "images/clientSay5.png";
+const clientSay6 = "images/clientSay6.png";
+const quotationImg = "images/quotation.png";
+const quotationImg2 = "images/quotation2.png";
+
 
 const DEMO_DATA = [
   {

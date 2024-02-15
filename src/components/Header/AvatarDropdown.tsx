@@ -1,7 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
 import { avatarImgs } from "contains/fakeData";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
 import Avatar from "shared/Avatar/Avatar";
 import SwitchDarkMode2 from "shared/SwitchDarkMode/SwitchDarkMode2";
 
@@ -58,10 +57,8 @@ export default function AvatarDropdown() {
                     </div>
 
                     <div className="w-full border-b border-neutral-200 dark:border-neutral-700" />
-
-                    {/* ------------------ 1 --------------------- */}
-                    <Link
-                      to={"/account"}
+                    <a
+                      href={"/account"}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -92,11 +89,9 @@ export default function AvatarDropdown() {
                       <div className="ml-4">
                         <p className="text-sm font-medium ">{"My Account"}</p>
                       </div>
-                    </Link>
-
-                    {/* ------------------ 2 --------------------- */}
-                    <Link
-                      to={"/checkout"}
+                    </a>
+                    <a
+                      href={"/checkout"}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -144,11 +139,9 @@ export default function AvatarDropdown() {
                       <div className="ml-4">
                         <p className="text-sm font-medium ">{"My Order"}</p>
                       </div>
-                    </Link>
-
-                    {/* ------------------ 2 --------------------- */}
-                    <Link
-                      to={"/account-savelists"}
+                    </a>
+                    <a
+                      href={"/account-savelists"}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -171,7 +164,7 @@ export default function AvatarDropdown() {
                       <div className="ml-4">
                         <p className="text-sm font-medium ">{"Wishlist"}</p>
                       </div>
-                    </Link>
+                    </a>
 
                     <div className="w-full border-b border-neutral-200 dark:border-neutral-700" />
 
@@ -215,10 +208,8 @@ export default function AvatarDropdown() {
                       </div>
                       <SwitchDarkMode2 />
                     </div>
-
-                    {/* ------------------ 2 --------------------- */}
-                    <Link
-                      to={"/#"}
+                    <a
+                      href={"/#"}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -277,11 +268,9 @@ export default function AvatarDropdown() {
                       <div className="ml-4">
                         <p className="text-sm font-medium ">{"Help"}</p>
                       </div>
-                    </Link>
-
-                    {/* ------------------ 2 --------------------- */}
-                    <Link
-                      to={"/#"}
+                    </a>
+                    <a
+                      href={"/#"}
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -319,7 +308,7 @@ export default function AvatarDropdown() {
                       <div className="ml-4">
                         <p className="text-sm font-medium ">{"Log out"}</p>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Popover.Panel>
