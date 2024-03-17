@@ -1,5 +1,3 @@
-"use client";
-
 import React, { Fragment, useState } from "react";
 import { FC } from "react";
 import DatePicker from "react-datepicker";

@@ -13,22 +13,21 @@ import {
 import IconDiscount from "components/IconDiscount";
 import Prices from "components/Prices";
 import toast, { Toaster } from "react-hot-toast";
-import SectionSliderProductCard from "components/SectionSliderProductCard";
 import Policy from "./Policy";
 import ReviewItem from "components/ReviewItem";
 import ButtonSecondary from "shared/Button/ButtonSecondary";
-import SectionPromo2 from "components/SectionPromo2";
 import ModalViewAllReviews from "./ModalViewAllReviews";
 import NotifyAddTocart from "components/NotifyAddTocart";
-const detail1JPG = "images/products/detail1.jpg";
-const detail2JPG = "images/products/detail2.jpg";
-const detail3JPG = "images/products/detail3.jpg";
-export interface ProductDetailPageProps {
+const storagePath = "https://shm-product-images.s3.amazonaws.com";
+const detail1JPG = storagePath + "/images/products/detail1.jpg";
+const detail2JPG = storagePath + "/images/products/detail2.jpg";
+const detail3JPG = storagePath + "/images/products/detail3.jpg";
+export interface PageProductDetailProps {
     className?: string;
     product?: product;
 }
 
-const ProductDetailPage: FC<ProductDetailPageProps> = ({
+const PageProductDetail: FC<PageProductDetailProps> = ({
     className = "",
     product,
 }) => {
@@ -64,12 +63,10 @@ const ProductDetailPage: FC<ProductDetailPageProps> = ({
             { position: "top-right", id: "nc-product-notify", duration: 3000 }
         );
     };
-
     const renderVariants = (variants) => {
         if (!variants || !variants.length) {
             return null;
         }
-
         return (
             <div>
                 <label htmlFor="">
@@ -104,7 +101,6 @@ const ProductDetailPage: FC<ProductDetailPageProps> = ({
             </div>
         );
     };
-
     const renderSizeList = (sizes) => {
         if (!allOfSizes || !sizes || !sizes.length) {
             return null;
@@ -354,14 +350,14 @@ const ProductDetailPage: FC<ProductDetailPageProps> = ({
                     {productReviews && renderReviews(productReviews)}
                     <hr className="border-slate-200 dark:border-slate-700" />
                     {/* <SectionSliderProductCard
-                        heading="Customers also purchased"
-                        subHeading=""
-                        headingFontClassName="text-2xl font-semibold"
-                        headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
-                    /> */}
+                            heading="Customers also purchased"
+                            subHeading=""
+                            headingFontClassName="text-2xl font-semibold"
+                            headingClassName="mb-10 text-neutral-900 dark:text-neutral-50"
+                        /> */}
                     {/* <div className="pb-20 xl:pb-28 lg:pt-14">
-                        <SectionPromo2 />
-                    </div> */}
+                            <SectionPromo2 />
+                        </div> */}
                 </div>
             </main>
             <ModalViewAllReviews
@@ -373,4 +369,4 @@ const ProductDetailPage: FC<ProductDetailPageProps> = ({
         </div>
     );
 };
-export default ProductDetailPage;
+export default PageProductDetail;

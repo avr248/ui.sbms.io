@@ -1,5 +1,3 @@
-"use client";
-
 import React, { FC, useState } from "react";
 import LocationInput from "../LocationInput";
 import RentalCarDatesRangeInput from "./RentalCarDatesRangeInput";

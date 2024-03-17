@@ -1,4 +1,3 @@
-//  ######  CustomLink  ######## //
 export interface CustomLink {
   label: string;
   href: string;
@@ -14,5 +13,3 @@ export type TwMainColor =
   | "blue"
   | "purple"
   | "gray";
-
-//
