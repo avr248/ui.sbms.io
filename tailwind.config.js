@@ -14,8 +14,12 @@ function customColors(cssVar) {
 }
 
 module.exports = {
+    corePlugins: {
+        preflight: false,
+    },
 	content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-	darkMode: 'class', // or 'media' or 'class',
+	important: '#__next',
+    darkMode: 'class', // or 'media' or 'class',
 	theme: {
 		container: {
 			center: true,
